@@ -1,4 +1,4 @@
-# holbertonschool-higher_level_programming
+
 # Holberton School - Higher Level Programming
 
 This repository contains projects related to higher-level programming languages,
