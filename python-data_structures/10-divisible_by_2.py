@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def divisible_by_2_alt3(my_list=[]):
     """Using while loop."""
     result = []
