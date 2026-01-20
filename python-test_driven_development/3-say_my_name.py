@@ -28,8 +28,5 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
     
-    # Print without trailing space when last_name is empty
-    if last_name:
-        print(f"My name is {first_name} {last_name}")
-    else:
-        print(f"My name is {first_name}")
+    # Print with trailing space (as expected by tests)
+    print(f"My name is {first_name} {last_name}")
