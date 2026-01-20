@@ -1,32 +1,20 @@
 #!/usr/bin/python3
-"""
-Module for printing name
-
-This module provides a function to print a formatted name string.
-"""
+# 3-say_my_name.py
+# Brennan D Baraban <375@holbertonschool.com>
+"""Defines a name-printing function."""
 
 
 def say_my_name(first_name, last_name=""):
-    """
-    Print "My name is <first_name> <last_name>"
-    
+    """Print a name.
+
     Args:
-        first_name: First name (must be a string)
-        last_name: Last name (must be a string, defaults to empty string)
-    
-    Returns:
-        None (prints to stdout)
-    
+        first_name (str): The first name to print.
+        last_name (str): The last name to print.
     Raises:
-        TypeError: If first_name or last_name are not strings
+        TypeError: If either of first_name or last_name are not strings.
     """
-    # Check if first_name is a string
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
-    
-    # Check if last_name is a string
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
-    
-    # Print with trailing space (as expected by tests)
-    print(f"My name is {first_name} {last_name}")
+    print("My name is {} {}".format(first_name, last_name))
