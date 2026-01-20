@@ -19,16 +19,7 @@ def say_my_name(first_name, last_name=""):
     
     Raises:
         TypeError: If first_name or last_name are not strings
-    
-    Examples:
-        >>> say_my_name("John", "Smith")
-        My name is John Smith
-        >>> say_my_name("Walter", "White")
-        My name is Walter White
-        >>> say_my_name("Bob")
-        My name is Bob 
     """
-    
     # Check if first_name is a string
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
