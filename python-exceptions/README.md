@@ -52,7 +52,7 @@ Function that raises a type exception.
 Function that raises a name exception with a message.
 
 ## Author
-[Your Name]
+[Maryam Alessa]
 
 ## License
 This project is part of the Holberton School curriculum.
