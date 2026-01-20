@@ -1,0 +1,39 @@
+# Python Test-driven Development
+
+Holberton School project covering test-driven development in Python.
+
+##Learning Objectives
+Why Python programming is awesome
+Whats an interactive test
+Why tests are important
+How to write Docstrings to create tests
+How to write documentation for each module and function
+What are the basic option flags to create tests
+How to find edge cases
+
+##Requirements
+Allowed editors: vi, vim, emacs
+All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+All your files should end with a new line
+The first line of all your files should be exactly #!/usr/bin/python3
+A README.md file, at the root of the folder of the project, is mandatory
+Your code should use the pycodestyle (version 2.7.*)
+All your files must be executable
+The length of your files will be tested using wc
+
+## Files
+- `0-add_integer.py` - Add two integers
+- `2-matrix_divided.py` - Divide matrix elements  
+- `3-say_my_name.py` - Print formatted name
+- `4-print_square.py` - Print square with #
+- `5-text_indentation.py` - Text indentation
+- `tests/` - Test files for each task
+
+👤 Author
+ Maryam Alessa
+
+# Run doctests
+python3 -m doctest ./tests/*.txt
+
+# Run unittest
+python3 -m unittest tests.6-max_integer_tesit
