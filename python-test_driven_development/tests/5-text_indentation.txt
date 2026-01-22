@@ -1,6 +1,3 @@
-# TESTS FOR 5-text_indentation MODULE
-
-Importing the module:
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 
