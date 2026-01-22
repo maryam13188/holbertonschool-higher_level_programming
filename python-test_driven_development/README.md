@@ -41,14 +41,20 @@ Run unittests with:
 python3 -m unittest tests.6-max_integer_test
 All modules and functions include proper documentation
 
-Project Files
-File	Description
-0-add_integer.py	Adds two integers
-2-matrix_divided.py	Divides all elements of a matrix
-3-say_my_name.py	Prints a formatted name
-4-print_square.py	Prints a square using #
-5-text_indentation.py	Prints text with indentation rules
-6-max_integer.py	Returns the maximum integer in a list
-tests/	Contains all test cases
-Author
-Maryam Alessa
+
+## Project Files
+
+| File                  | Description                              |
+|-----------------------|------------------------------------------|
+| `0-add_integer.py`    | Adds two integers                        |
+| `2-matrix_divided.py` | Divides all elements of a matrix         |
+| `3-say_my_name.py`    | Prints a formatted name                  |
+| `4-print_square.py`   | Prints a square using `#`                |
+| `5-text_indentation.py` | Prints text with indentation rules     |
+| `6-max_integer.py`    | Returns the maximum integer in a list   |
+| `tests/`              | Contains all test cases                  |
+
+## Author
+Maryam Alessa 
+- 
+
