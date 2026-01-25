@@ -1,23 +1,26 @@
 #!/usr/bin/python3
-"""Rectangle module."""
+"""
+Class Rectangle that defines a rectangle with width and height,
+and calculates area and perimeter.
+"""
 
 
 class Rectangle:
-    """Rectangle class."""
+    """Rectangle class with width and height properties"""
 
     def __init__(self, width=0, height=0):
-        """Initialize rectangle."""
+        """Initialize the rectangle with optional width and height"""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Get width."""
+        """Retrieve the width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Set width."""
+        """Set the width with validation"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,12 +29,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get height."""
+        """Retrieve the height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Set height."""
+        """Set the height with validation"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -39,18 +42,11 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Return area."""
-        return self.__width * self.__height
+        """Return the rectangle area"""
+        return self.width * self.height
 
     def perimeter(self):
-        """Return perimeter."""
-        if self.__width == 0 or self.__height == 0:
+        """Return the rectangle perimeter, 0 if width or height is 0"""
+        if self.width == 0 or self.height == 0:
             return 0
-        return 2 * (self.__width + self.__height)
-
-    def __str__(self):
-        """Print rectangle with #."""
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        rows = ["#" * self.__width for _ in range(self.__height)]
-        return "\n".join(rows)
+        return 2 * (self.width + self.height)
