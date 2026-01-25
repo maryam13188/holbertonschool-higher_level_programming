@@ -4,7 +4,10 @@
 
 
 class Rectangle:
-    """Represents a rectangle with width and height."""
+    """Represents a rectangle with width and height.
+    This class can compute area, perimeter, and print the rectangle
+    using the '#' character.
+    """
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle instance with optional width and height."""
