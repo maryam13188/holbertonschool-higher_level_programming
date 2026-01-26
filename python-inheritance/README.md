@@ -51,7 +51,7 @@ class MyClass:
 print(lookup(MyClass))
 
 The function should not use any imports.
-
+```
 Author
 
 Maryam
