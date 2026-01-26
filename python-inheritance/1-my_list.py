@@ -15,4 +15,3 @@ class MyList(list):
         the original list.
         """
         print(sorted(self))
-        
