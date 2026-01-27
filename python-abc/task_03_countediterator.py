@@ -1,17 +1,18 @@
+
 #!/usr/bin/env python3
 
 # CountedIterator class
 class CountedIterator:
     def __init__(self, iterable):
-        self.iterator = iter(iterable)  # الأصلي iterator للكائن
-        self.count = 0  # عداد العناصر المسترجعة
+        self.iterator = iter(iterable)  # Original iterator
+        self.count = 0  # Counter for iterated items
 
     def __next__(self):
-        # جلب العنصر التالي وزيادة العداد
-        item = next(self.iterator)  # قد يرفع StopIteration تلقائياً عند نهاية العناصر
+        # Fetch the next item and increment the counter
+        item = next(self.iterator)  # Raises StopIteration when done
         self.count += 1
         return item
 
     def get_count(self):
-        # إرجاع عدد العناصر التي تم استرجاعها حتى الآن
+        # Return the number of items iterated so far
         return self.count
