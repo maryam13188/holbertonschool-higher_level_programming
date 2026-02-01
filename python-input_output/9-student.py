@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""Module that defines a Student class."""
+"""Module that defines a Student class.
+"""
 
 
 class Student:
-    """Student class with first_name, last_name, age, 
+    """Student class with first_name, last_name, age,
     and JSON representation.
     """
 
     def __init__(self, first_name, last_name, age):
-        """Initialize a Student instance with first_name, last_name, and age."""
+        """Initialize a Student instance with first_name, last_name,
+        and age.
+        """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
