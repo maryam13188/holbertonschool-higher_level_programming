@@ -1,11 +1,12 @@
-Python - Serialization
-📌 Overview
+##Python - Serialization
+
+## 📌 Overview
 
 This project explores data serialization and deserialization in Python using different formats including JSON, Pickle, CSV, and XML.
 
 The goal is to understand how data can be converted into a transferable format and reconstructed back into Python objects.
 
-📂 Tasks
+## 📂 Tasks
 0. Basic Serialization
 
 Implemented JSON serialization and deserialization for Python dictionaries:
@@ -40,7 +41,7 @@ serialize_to_xml
 
 deserialize_from_xml
 
-🛠 Technologies Used
+## 🛠 Technologies Used
 
 Python 3
 
@@ -52,7 +53,7 @@ csv
 
 xml.etree.ElementTree
 
-🎯 Concepts Covered
+## 🎯 Concepts Covered
 
 Serialization vs Deserialization
 
