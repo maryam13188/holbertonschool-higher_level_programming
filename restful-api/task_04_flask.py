@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+"""
+Flask API for user management
+"""
+
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+# In-memory user storage
+# NOTE: Remove testing data before pushing to checker
+users = {
+    "jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
+    "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}
+}
+
+
+@app.route('/')
+def home():
+    """Root endpoint"""
+    return "Welcome to the Flask API!"
+
+
+@app.route('/data')
+def get_data():
+    """Return list of usernames"""
+    usernames = list(users.keys())
+    return jsonify(usernames)
+
+
+@app.route('/status')
+def get_status():
+    """API status endpoint"""
+    return "OK"
+
+
+@app.route('/users/<username>')
+def get_user(username):
+    """Get user by username"""
+    if username in users:
+        return jsonify(users[username])
+    else:
+        return jsonify({"error": "User not found"}), 404
+
+
+@app.route('/add_user', methods=['POST'])
+def add_user():
+    """Add a new user"""
+    try:
+        # Check if request contains JSON
+        if not request.is_json:
+            return jsonify({"error": "Invalid JSON"}), 400
+        
+        # Get JSON data
+        data = request.get_json()
+        
+        # Validate required fields
+        if 'username' not in data:
+            return jsonify({"error": "Username is required"}), 400
+        
+        username = data['username']
+        
+        # Check if user already exists
+        if username in users:
+            return jsonify({"error": "Username already exists"}), 409
+        
+        # Create user object
+        user = {
+            "username": username,
+            "name": data.get("name", ""),
+            "age": data.get("age", ""),
+            "city": data.get("city", "")
+        }
+        
+        # Add to users dictionary
+        users[username] = user
+        
+        # Return success response
+        return jsonify({
+            "message": "User added",
+            "user": user
+        }), 201
+        
+    except Exception:
+        # Catch any JSON parsing errors
+        return jsonify({"error": "Invalid JSON"}), 400
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
