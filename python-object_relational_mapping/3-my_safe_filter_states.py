@@ -1,13 +1,8 @@
 #!/usr/bin/python3
 """
-Lists all states with name matching the argument from the database hbtn_0e_0_usa.
-This script is safe from SQL injection by using parameterized queries.
-Arguments:
-    argv[1]: mysql username
-    argv[2]: mysql password
-    argv[3]: database name
-    argv[4]: state name to search for
-Results are sorted in ascending order by states.id.
+Module for task 3: My safe filter states
+This script lists all states with name matching the argument from the database.
+It is safe from SQL injection by using parameterized queries.
 """
 
 import MySQLdb
@@ -15,6 +10,10 @@ import sys
 
 
 if __name__ == "__main__":
+    """
+    Main function that connects to MySQL database and retrieves states
+    matching the provided state name (safe from SQL injection).
+    """
     # Get command line arguments
     username = sys.argv[1]
     password = sys.argv[2]
