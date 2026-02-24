@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 """
-Module for task 3: My safe filter states
-This script lists all states with name matching the argument from the database.
-It is safe from SQL injection by using parameterized queries.
+This module lists all states with name matching the argument from database.
+It is safe from SQL injection attacks by using parameterized queries.
 """
 
 import MySQLdb
 import sys
 
 
-if __name__ == "__main__":
+def main():
     """
-    Main function that connects to MySQL database and retrieves states
-    matching the provided state name (safe from SQL injection).
+    Connects to MySQL database and retrieves all states matching the provided
+    state name. Uses parameterized queries to prevent SQL injection.
+    Results are sorted in ascending order by states.id.
     """
     # Get command line arguments
     username = sys.argv[1]
@@ -42,4 +42,8 @@ if __name__ == "__main__":
     # Close cursor and database connection
     cur.close()
     db.close()
+
+
+if __name__ == "__main__":
+    main()
 
