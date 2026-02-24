@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
 Lists all states with name starting with N (upper N) from database hbtn_0e_0_usa
+Arguments: mysql username, mysql password, database name
+Results sorted in ascending order by states.id
 """
 
 import MySQLdb
@@ -29,4 +31,3 @@ if __name__ == "__main__":
 
     cur.close()
     db.close()
-
